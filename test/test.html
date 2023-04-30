@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+<body>
+<div className="anime" style="display: flex;    align-items: flex-end;" id="ad">
+    <span class="ad">p</span>
+    <span class="ad">r</span>
+    <span class="ad">o</span>
+    <span class="ad">j</span>
+    <span class="ad">e</span>
+    <span class="ad">c</span>
+    <span class="ad">t</span>
+    <span class="ad">s</span>
+</div>
+<style>
+    
+</style>
+<script>
+    String.prototype.replaceAt = function(index, replacement) {
+        return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+    }
+    function randomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+    function animation(animeObject){
+        let newCurtext = [];
+        let stageCounter = 0;
+        for (let i = 0; i < animeObject.currentText.length; ++i){
+            let classstring = "";
+            if (stageCounter < animeObject.stagePars.stage && randomInt(5) != 1){
+                classstring = "adActive";
+                ++stageCounter;
+            } else {
+                classstring = "ad";
+            }
+            let letter = animeObject.currentText[randomInt(animeObject.maxLen + 1)];
+            newCurtext += `<span class="${classstring}">${letter}</span>`;
+        }
+        animeObject.element.innerHTML = newCurtext;
+    }
+    function animationEnd(animeObject){
+        animeObject.stagePars.stage = 0;
+        let newCurtext = [];
+        for (let i = 0; i < animeObject.currentText.length; ++i){
+            let letter = animeObject.text[i];
+            newCurtext += `<span class="adActive">${letter}</span>`;
+        }
+        animeObject.element.innerHTML = newCurtext;
+    }
+    function animate(animeObject){
+        let stagePars = animeObject.stagePars;
+        let timer = setInterval(function(){
+            if(stagePars.stage >= stagePars.maxStage){
+                animationEnd(animeObject);
+                clearInterval(timer);
+                return;
+            }
+            stagePars.stage += 1;
+            animation(animeObject);
+        }, animeObject.timeOffset);
+    }
+
+    class animeAnima{
+        constructor(text, element){
+            this.currentText = text;
+            this.text = text;
+            this.element = element;
+            this.maxLen = this.text.length - 1;
+            this.timeOffset = 100;
+            this.stagePars = {stage: 0, maxStage: 15};
+        }
+    }
+    let textEl = document.getElementById("ad");
+    let firstText = new animeAnima("projects", textEl);
+    document.addEventListener("click", (e) => {console.log("test");animate(firstText)});
+</script>
+</body>
+</html>
+

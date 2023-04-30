@@ -1,0 +1,40 @@
+/* .App_sub_black1{
+    background: #000000;
+} */
+/* .App_sub_grey{
+    background: linear-gradient(180deg, #272829 0%, #0E0F11 100%);;
+}
+.App_sub_black2{
+    background: radial-gradient(50% 50% at 50% 50%, #1D3936 0%, #010F0E 100%);;
+} */
+.App_black .leftNav_item{
+    color: #FFFFFF;
+}
+.App_black .rightNav_item{
+    color: transparent;
+    text-shadow: 0 0 0 rgba(255,255,255,1);
+}
+.App_black .header_title{
+    color: #FFFFFF;
+}
+.App_sub_black1 .project_slide_control_active .project_slide_control_activator{
+  background: #0A48A5;
+}
+.App_sub_grey .project_slide_control_active .project_slide_control_activator{
+  background: #BCD2D7;
+}
+.App_sub_black2 .project_slide_control_active .project_slide_control_activator{
+  background: #A54B0A;
+}
+.App_sub_black1 .leftNav_item_active{
+    text-shadow: 2px 2px 0px rgba(25, 79, 218, 0.7);
+}
+.App_sub_grey .leftNav_item_active{
+    text-shadow: 2px 2px 0px rgba(89, 96, 113, 0.7);
+}
+.App_sub_black2 .leftNav_item_active{
+    text-shadow: 2px 2px 0px rgba(218, 94, 25, 0.7);
+}
+.App_sub_white .header_title{
+    opacity: 0.7;
+}

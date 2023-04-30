@@ -1,0 +1,1 @@
+export const sysColors = [{main: "white", sub: "white"}, {main: "black", sub: "black1"}, {main: "black", sub: "grey"}, {main: "black", sub: "black2"}]

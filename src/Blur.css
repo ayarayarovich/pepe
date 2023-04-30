@@ -1,0 +1,44 @@
+@keyframes TextBlurForwardBlack {
+    0% {
+        text-shadow: 0 0 0 rgba(0,0,0,1);
+    }
+    100% {
+        text-shadow: 0 0 35px rgba(0,0,0,1);
+    }
+}
+@keyframes TextBlurBackwardBlack {
+    0% {
+        text-shadow: 0 0 35px rgba(0,0,0,1);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(0,0,0,1);
+    }
+}
+@keyframes TextBlurForwardWhite {
+    0% {
+        text-shadow: 0 0 0 rgba(255,255,255,1);
+    }
+    100% {
+        text-shadow: 0 0 35px rgba(255,255,255,1);
+    }
+}
+@keyframes TextBlurBackwardWhite {
+    0% {
+        text-shadow: 0 0 35px rgba(255,255,255,1);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(255,255,255,1);
+    }
+}
+.forwardBlack{
+    animation: TextBlurForwardBlack 0.8s linear;
+}
+.forwardWhite{
+    animation: TextBlurForwardWhite 0.8s linear;
+}
+.backwardBlack{
+    animation: TextBlurBackwardBlack 0.8s linear;
+}
+.backwardWhite{
+    animation: TextBlurBackwardWhite 0.8s linear;
+}
