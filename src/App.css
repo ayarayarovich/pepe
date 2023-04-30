@@ -242,7 +242,6 @@ main{
 }
 .main_text_wrapper{
   margin-top: 0vh;
-  height: 100%;
 }
 .main_text_wrapper .main_stndart_text{
   margin-bottom: 0 !important;
@@ -393,7 +392,7 @@ main{
   height: 100%;
   border-radius: 30px;
   position: relative;
-  transition: all 0.5s;
+  transition: all 1s;
   left: 0;
   animation: rpulse 3s ease-in infinite;
 }

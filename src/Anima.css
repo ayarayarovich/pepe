@@ -1,8 +1,8 @@
 #header_block{
-    transition: all 0.5s;
+    transition: all 1s;
 }
 #main_block{
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .stage0_container{
     width: 100vw;
@@ -29,7 +29,7 @@
     z-index: 3;
     top: 5.72vw;
     left: 47vw;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .lettersE{
     position: absolute;
@@ -37,7 +37,7 @@
     z-index: 3;
     top: 5.725vw;
     left: 47vw;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 @keyframes Orbita1 {
     25% {
@@ -360,7 +360,7 @@
     position: absolute;
     top: 32vw;
     left: 46vw;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .stage0_text_item{
     font-family: 'Roboto';
@@ -428,7 +428,7 @@
 }
 .s3_dot{
     position: fixed;
-    transition: all 0.5s;
+    transition: all 1s;
     width: 0.8vw;
     height: 0.8vw !important;
     z-index: 4;
@@ -508,7 +508,7 @@
     top: 28vw;
 }
 .s3_dot_path{
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .container-blur{
     position: fixed;
@@ -532,10 +532,10 @@
     cursor: default !important;
 }
 .header_logo_dot{
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .header_title{
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .main_contsts{
   justify-content: end;
